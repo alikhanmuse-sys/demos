@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District9 — Burgers & Fast Food, Mardan</title>
+<meta name="description" content="District9 — crispy burgers, loaded fries and more on Main Nowshera Road, Mardan. Open daily 12 PM to 12 AM.">
+<style>
+  :root{
+    --bg:#120c08; --bg2:#1b120c; --card:#20150d;
+    --line:#3a2a1c; --text:#f5ede4; --muted:#b8a48f; --accent:#f0a832;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  /* hero */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('img6.jpg') center/cover;transform:scale(1.08);
+    animation:slowzoom 18s ease-in-out infinite alternate}
+  @keyframes slowzoom{from{transform:scale(1.08)}to{transform:scale(1.18)}}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(10,6,4,.94) 8%,rgba(10,6,4,.45) 45%,rgba(10,6,4,.25) 100%)}
+  .hero-inner{position:relative;z-index:2;padding:0 24px 72px;max-width:1060px;margin:0 auto;width:100%}
+  .kicker{color:var(--accent);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+  .hero h1{font-size:clamp(52px,9vw,96px);font-weight:800;letter-spacing:-2px;line-height:1}
+  .hero p{margin-top:14px;font-size:19px;color:#e6d9c8;max-width:520px}
+  .hero-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 30px;border-radius:12px;text-decoration:none;
+    font-size:16px;font-weight:700;transition:transform .3s ease,box-shadow .3s ease}
+  .btn.order{background:#25d366;color:#062b16}
+  .btn.order:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,.3)}
+  .btn.call{border:1px solid var(--line);color:var(--text);background:rgba(20,12,8,.5)}
+  .btn.call:hover{border-color:var(--accent)}
+  /* sections */
+  section{padding:84px 0}
+  .sec-head{margin-bottom:40px}
+  .sec-head h2{font-size:clamp(30px,4.5vw,44px);font-weight:750;letter-spacing:-1px}
+  .sec-head p{color:var(--muted);margin-top:8px;font-size:17px}
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .dish{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    transition:transform .4s ease,border-color .4s ease}
+  .dish:hover{transform:translateY(-6px);border-color:#5a422c}
+  .dish img{height:210px;width:100%;object-fit:cover}
+  .dish-body{padding:20px 22px 24px}
+  .dish-body h3{font-size:19px;margin-bottom:6px}
+  .dish-body p{color:var(--muted);font-size:15px}
+  /* gallery */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .strip img{height:200px;width:100%;object-fit:cover;border-radius:14px;
+    transition:transform .4s ease;cursor:pointer}
+  .strip img:hover{transform:scale(1.03)}
+  /* visit */
+  .visit{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+  .v-block h3{font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .v-block p{color:var(--muted);font-size:16.5px}
+  .v-block a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent)}
+  footer{padding:44px 0 60px;color:var(--muted);font-size:14px;text-align:center}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:640px){.strip{grid-template-columns:repeat(2,1fr)}section{padding:64px 0}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="kicker">Mardan · Fast Food</div>
+    <h1>District9</h1>
+    <p>Crispy burgers, loaded fries and late-night cravings — on Main Nowshera Road.</p>
+    <div class="hero-cta">
+      <a class="btn order" href="https://wa.me/92937880937?text=Assalam%20o%20alaikum%2C%20I%20want%20to%20place%20an%20order.">Order on WhatsApp</a>
+      <a class="btn call" href="tel:+92937880937">0937 880937</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Crowd favourites</h2>
+      <p>What people keep coming back for.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="dish reveal">
+        <img src="img1.jpg" alt="Crispy chicken burger">
+        <div class="dish-body"><h3>Crispy Chicken Burger</h3><p>Crunchy fillet, white sauce, fresh lettuce.</p></div>
+      </div>
+      <div class="dish reveal">
+        <img src="img2.jpg" alt="Beef cheese burgers">
+        <div class="dish-body"><h3>Beef Cheese Burger</h3><p>Melted cheese over a juicy beef patty.</p></div>
+      </div>
+      <div class="dish reveal">
+        <img src="img3.jpg" alt="Loaded fries">
+        <div class="dish-body"><h3>Loaded Fries</h3><p>Piled with crispy chicken, sauce and seasoning.</p></div>
+      </div>
+      <div class="dish reveal">
+        <img src="img8.jpg" alt="Chicken cheese sandwich">
+        <div class="dish-body"><h3>Chicken Cheese Sandwich</h3><p>Crispy chicken, cheese and peppers in a soft bun.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Fresh from the kitchen</h2>
+    </div>
+    <div class="strip reveal">
+      <img src="img4.jpg" alt="Burgers and loaded fries tray">
+      <img src="img5.jpg" alt="Crispy chicken burgers">
+      <img src="img7.jpg" alt="Chicken sandwich close-up">
+      <img src="img6.jpg" alt="Outdoor seating at sunset">
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Visit us</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="v-block reveal">
+        <h3>Find us</h3>
+        <p>Shop No. 1, Stances Plaza,<br>Opp. Sui Northern Gas Office,<br>Main Nowshera Road, Mardan</p>
+      </div>
+      <div class="v-block reveal">
+        <h3>Hours</h3>
+        <p>Open daily<br>12:00 PM – 12:00 AM</p>
+      </div>
+      <div class="v-block reveal">
+        <h3>Order</h3>
+        <p><a href="https://wa.me/92937880937">WhatsApp: 0937 880937</a><br>Also on foodpanda</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>District9 · Mardan</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
