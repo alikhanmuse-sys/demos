@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Saud — Software Engineer</title>
+<meta name="description" content="Muhammad Saud builds websites and machine learning systems. Founder of LogicStack.">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#131a24; --line:#232d3d;
+    --text:#e8edf3; --muted:#9aa7b8; --accent:#3fb27f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  header{padding:88px 0 56px}
+  .kicker{color:var(--accent);font-size:13px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:18px}
+  h1{font-size:clamp(40px,7vw,62px);font-weight:700;letter-spacing:-1.5px;line-height:1.08}
+  .role{margin-top:14px;font-size:19px;color:var(--muted)}
+  .role strong{color:var(--text);font-weight:600}
+  .rule{height:1px;background:var(--line);margin:56px 0;border:0}
+  section{margin-bottom:64px}
+  h2{font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:26px 26px;transition:transform .35s ease,border-color .35s ease}
+  .card:hover{transform:translateY(-3px);border-color:#334155}
+  .card h3{font-size:19px;margin-bottom:6px}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card p{color:var(--muted);font-size:15.5px}
+  .card .meta{margin-top:12px;font-size:13px;color:var(--accent)}
+  .stack{display:grid;gap:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;
+    font-size:14px;color:var(--muted);transition:border-color .3s,color .3s}
+  .chip:hover{border-color:var(--accent);color:var(--text)}
+  .contact-row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;padding:12px 24px;border-radius:10px;text-decoration:none;
+    font-size:15px;font-weight:600;transition:transform .3s ease,box-shadow .3s ease}
+  .btn.primary{background:var(--accent);color:#06281a}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(63,178,127,.28)}
+  .btn.ghost{border:1px solid var(--line);color:var(--text)}
+  .btn.ghost:hover{border-color:var(--accent)}
+  footer{padding:40px 0 64px;color:var(--muted);font-size:13.5px}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:560px){header{padding:64px 0 40px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="reveal">
+    <div class="kicker">Mardan, Pakistan</div>
+    <h1>Muhammad Saud</h1>
+    <p class="role">I build <strong>websites</strong> and <strong>machine learning systems</strong> that work in the real world.</p>
+  </header>
+
+  <hr class="rule">
+
+  <section class="reveal">
+    <h2>Work</h2>
+    <div class="stack">
+      <div class="card">
+        <h3><a href="https://logicstack.org">LogicStack</a> — Founder</h3>
+        <p>Software house building websites and web apps for clients. Design, development, deployment — handled end to end.</p>
+        <div class="meta">logicstack.org</div>
+      </div>
+      <div class="card">
+        <h3>HeartCare — Heart Disease Prediction</h3>
+        <p>Web app that predicts heart disease risk from 13 clinical inputs using XGBoost (84% accuracy). Published as a working paper.</p>
+        <div class="meta">doi:10.5281/zenodo.23401982</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Skills</h2>
+    <div class="chips">
+      <span class="chip">Python</span><span class="chip">Machine Learning</span>
+      <span class="chip">JavaScript</span><span class="chip">React</span>
+      <span class="chip">Flask</span><span class="chip">Firebase</span>
+      <span class="chip">SQL</span><span class="chip">Git</span>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>BS Computer Science</h3>
+      <p>Government Postgraduate College Mardan (affiliated with Abdul Wali Khan University Mardan) — 2025</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Contact</h2>
+    <div class="contact-row">
+      <a class="btn primary" href="mailto:msaud.dev@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://github.com/MuhammadSaud60">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/muhammad-saud-281778317/">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer class="reveal">© 2026 Muhammad Saud · Built by hand, no templates.</footer>
+
+</div>
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
